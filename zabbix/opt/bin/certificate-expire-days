@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DOMAIN=$1
+
+DATE_EXP=$(curl -kvvI https://$DOMAIN/ 2>&1 | grep 'expire date' | awk -F: '{print $2}' | awk '{print $1}')
+
+DATE_NOW=$(date +"%Y-%m-%d")
+
+/opt/bin/date-difference-days $DATE_NOW $DATE_EXP
+

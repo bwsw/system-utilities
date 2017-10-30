@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DOMAIN=$1
+DEFAULT=365
+
+if [ ! -d /tmp/domains-process ]
+then
+	mkdir /tmp/domains-process
+fi
+
+touch /tmp/domains-process/$DOMAIN
+
+if [ -f /tmp/domains-processed/$DOMAIN ]
+then
+	cat /tmp/domains-processed/$DOMAIN
+else
+	echo $DEFAULT
+fi
+

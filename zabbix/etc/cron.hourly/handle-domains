@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ ! -d /tmp/domains-process ]
+then
+	mkdir /tmp/domains-process
+fi
+
+ls /tmp/domains-process | while read DOMAIN
+do
+	echo $DOMAIN
+	DATE_EXP=$(wget -O - "https://www.nic.ru/whois/?query=$DOMAIN" 2>/dev/null | html2text | grep -Pi "(Registry Expiry Date|paid-till)" | awk -F: '{print $2}' | sed 's/[^-0123456789T]//g' | sed 's/T.*$//g')
+	DATE_NOW=$(date +"%Y-%m-%d")
+	if [ ! -d /tmp/domains-processed ]
+	then
+		mkdir /tmp/domains-processed
+	fi
+	/opt/bin/date-difference-days $DATE_NOW $DATE_EXP > /tmp/domains-processed/$DOMAIN
+	rm /tmp/domains-process/$DOMAIN
+	sleep 60
+done
