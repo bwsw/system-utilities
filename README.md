@@ -1,5 +1,7 @@
 # Raid Monitoring Utilities
 
+Repository includes set of scripts (cron, direct invocation) which we use to monitor storage integirity and performance for linux servers which run Adaptec Raid and MDADM with SAS/SATA and SSD storages. Actual space is managed by LVM2. All scripts and configuration items are located in proper folders under zabbix/ directory. Use subdirectories to move to root fs, e.g. zabbix/opt -> /opt, etc.
+
 ## Zabbix Items
 
 ### Storage Integrity
