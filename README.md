@@ -1,4 +1,4 @@
-# Raid Monitoring Utilities
+# Random Monitoring Utilities
 
 Repository includes set of scripts (cron, direct invocation) which we use to monitor servers.
 Righ now there are 
