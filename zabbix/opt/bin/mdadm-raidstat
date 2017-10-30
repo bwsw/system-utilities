@@ -1,0 +1,9 @@
+#!/bin/bash
+
+RAIDDEVS=`cat /proc/mdstat | grep UU | grep '_'`
+
+if [ -n "$RAIDDEVS" ]; then
+	echo "DEGRADED";
+else
+	echo "OK";
+fi

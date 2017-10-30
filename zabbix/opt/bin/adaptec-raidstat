@@ -1,0 +1,9 @@
+#!/bin/bash
+
+RAIDDEVS=`arcconf GETCONFIG  1 LD | grep Status | grep -v Optimal`
+
+if [ -n "$RAIDDEVS" ]; then
+	echo "DEGRADED";
+else
+	echo "OK";
+fi

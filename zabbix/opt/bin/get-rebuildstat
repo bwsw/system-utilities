@@ -1,0 +1,15 @@
+#!/bin/bash
+
+MD=$1
+FILE=/tmp/rebuildstat
+
+if [ -e $FILE ]; then
+	DATA=`cat $FILE | grep "$MD " | awk '{print $2}'`
+	if [ -z "$DATA" ]; then
+		echo "100"
+	else
+		echo $DATA
+	fi
+else
+	echo 0
+fi

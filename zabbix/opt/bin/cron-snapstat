@@ -1,0 +1,4 @@
+#!/bin/bash
+
+lvs | grep 'swi' |  awk '{print $2"/"$1, $6}' | sed 's/,/./' > /tmp/snapstat
+

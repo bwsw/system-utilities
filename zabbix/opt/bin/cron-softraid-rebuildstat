@@ -1,0 +1,11 @@
+#!/bin/bash
+
+> /tmp/rebuildstat
+
+for D in $(cat /proc/mdstat | grep md | awk '{print $1}'); do
+	STATUS=$(mdadm --detail /dev/$D | grep 'Rebuild Status')
+	if [ -n "$STATUS" ]; then
+		STATE=$(echo $STATUS | awk '{print $4}' | sed 's/\%//')
+		echo $D $STATE >> /tmp/rebuildstat
+	fi
+done

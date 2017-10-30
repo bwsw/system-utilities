@@ -1,0 +1,9 @@
+# /etc/cron.d/snapstat
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+*/5 *	* * *	root	/opt/bin/cron-snapstat
+*/5 *	* * *	root	/opt/bin/cron-softraid-degradedstat
+*/5 *	* * *	root	/opt/bin/cron-softraid-rebuildstat

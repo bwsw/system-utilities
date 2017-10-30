@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SNAP=$1
+
+if [ -e /tmp/snapstat ]; then
+	DATA=`cat /tmp/snapstat | grep "$SNAP " | awk '{print $2}'`
+	if [ -z "$DATA" ]; then
+		echo "0"
+	else
+		echo $DATA
+	fi
+else
+	echo 0
+fi
