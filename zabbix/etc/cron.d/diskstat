@@ -7,3 +7,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 */5 *	* * *	root	/opt/bin/cron-snapstat
 */5 *	* * *	root	/opt/bin/cron-softraid-degradedstat
 */5 *	* * *	root	/opt/bin/cron-softraid-rebuildstat
+*/5 *	* * *	root	/opt/bin/lsi-raidstat

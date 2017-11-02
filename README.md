@@ -14,7 +14,8 @@ All scripts and configuration items are located in proper folders under zabbix/ 
 
 * Rebuildstat[md131] - rebuild progress (progress)
 * Degradedstat[md131] - degraded information (which device)
-* AdaptecRaidstat - Adaptec RAID arrays health information (overall
+* AdaptecRaidstat - Adaptec RAID arrays health information (overall)
+* LsiRaidstat - LSI RAID arrays health information (overall)
 * SoftRaidstat - MDADM RAID arrays health information (overall)
 
 ### Storage Performance

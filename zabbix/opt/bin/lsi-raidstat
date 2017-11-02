@@ -1,0 +1,9 @@
+#!/bin/bash
+
+RAIDDEVS=`megasasctl -p | grep a0d | grep -v optimal | wc -l`
+
+if [ "$RAIDDEVS" -ne '0' ]; then
+	echo "DEGRADED";
+else
+	echo "OK";
+fi > /tmp/lsi-raid-stat
