@@ -1,0 +1,7 @@
+#!/bin/bash
+
+NODES="10.252.2.2 10.252.2.3 10.252.2.4"
+for NODE in $NODES
+do
+    echo stat | nc $NODE 2181 | grep 'Mode' | awk '{print $2}'
+done | grep -P "(leader|follower)" | wc -l

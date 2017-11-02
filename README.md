@@ -5,6 +5,7 @@ Righ now there are
 - storage integirity and performance for linux servers which run Adaptec Raid and MDADM, LVM with SAS/SATA and SSD storages.
 - domain expiration checkers
 - certificate expiration checkers
+- Zookeeper Integrity
 
 All scripts and configuration items are located in proper folders under zabbix/ directory. Use subdirectories to move to root fs, e.g. zabbix/opt -> /opt, etc.
 
@@ -17,6 +18,10 @@ All scripts and configuration items are located in proper folders under zabbix/ 
 * AdaptecRaidstat - Adaptec RAID arrays health information (overall)
 * LsiRaidstat - LSI RAID arrays health information (overall)
 * SoftRaidstat - MDADM RAID arrays health information (overall)
+
+### Zookeeper Cluster Integrity
+
+* ZkClusterEnsemble (amount of leader, follower nodes in cluster)
 
 ### Storage Performance
 
