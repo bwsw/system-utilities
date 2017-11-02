@@ -8,6 +8,7 @@ Righ now there are
 - Zookeeper Integrity
 - Elasticsearch Status
 - Logstash Status
+- Filebeat Status
 
 All scripts and configuration items are located in proper folders under zabbix/ directory. Use subdirectories to move to root fs, e.g. zabbix/opt -> /opt, etc.
 
@@ -31,7 +32,11 @@ All scripts and configuration items are located in proper folders under zabbix/ 
 
 ### Logstash
 
-* LogstashStatus (cluster status: ok, failure)
+* LogstashStatus (Process status: ok, failure)
+
+### Filebeat
+
+* FilebeatStatus
 
 ### Storage Performance
 
