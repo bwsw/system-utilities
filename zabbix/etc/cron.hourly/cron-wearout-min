@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lsscsi | egrep "(INTEL|KING)" | awk '{print $7}' | while read d ; do smartctl -a $d | egrep " (Media_Wear|SSD_Life_Left)" | awk '{print $4}' | grep -v 000 ; done | sort -n | head -n 1 | bc > /tmp/wearoutstat
