@@ -1,4 +1,4 @@
-# /etc/cron.d/snapstat
+# /etc/cron.d/diskstat
 
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
