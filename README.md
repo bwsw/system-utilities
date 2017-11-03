@@ -9,6 +9,7 @@ Righ now there are
 - Elasticsearch Status
 - Logstash Status
 - Filebeat Status
+- SSD Wearout status
 
 All scripts and configuration items are located in proper folders under zabbix/ directory. Use subdirectories to move to root fs, e.g. zabbix/opt -> /opt, etc.
 
@@ -21,6 +22,7 @@ All scripts and configuration items are located in proper folders under zabbix/ 
 * AdaptecRaidstat - Adaptec RAID arrays health information (overall)
 * LsiRaidstat - LSI RAID arrays health information (overall)
 * SoftRaidstat - MDADM RAID arrays health information (overall)
+* Wearout - ssd wearout status
 
 ### Zookeeper Cluster Integrity
 
