@@ -9,6 +9,7 @@ Righ now there are
 - Elasticsearch Status
 - Logstash Status
 - Filebeat Status
+- Kafka Integrity
 - SSD Wearout status
 
 All scripts and configuration items are located in proper folders under zabbix/ directory. Use subdirectories to move to root fs, e.g. zabbix/opt -> /opt, etc.
@@ -27,6 +28,10 @@ All scripts and configuration items are located in proper folders under zabbix/ 
 ### Zookeeper Cluster Integrity
 
 * ZkClusterEnsemble (amount of leader, follower nodes in cluster)
+
+### Kafka Cluster Integrity
+
+* KafkaEnsemble
 
 ### Elasticsearch
 

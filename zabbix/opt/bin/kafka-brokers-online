@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SERVER=10.252.2.4:2181
+RESULT=/tmp/kafka-brokers-online
+
+for ID in 1 2 3
+do
+   docker run -i --rm -e ZOO_LOG4J_PROP="ERROR" zookeeper /zookeeper-3.4.10/bin/zkCli.sh -server $SERVER get /brokers/ids/$ID | grep listener | jq -r ".host"
+done | wc -l > $RESULT.new
+
+cp --remove-destination $RESULT.new $RESULT
